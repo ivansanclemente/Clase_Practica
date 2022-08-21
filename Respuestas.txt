@@ -1,0 +1,14 @@
+Responda las siguientes preguntas (serán discutidas en la siguiente clase):
+
+¿Que significa que mi sistema sea modular y tenga un bajo acople?
+R:// Significa que los módulos no tienen una dependencia. En resumen, un código altamente cohesionado tiende a ser mas autocontenido y con menos dependencias
+
+¿Por qué quiero que un módulo en mi sistema tenga alta cohesión?
+R://En Ingeniería de software algo tiene alta cohesión si tiene un alcance definido, unos limites claros y un contenido delimitado y perfectamente ubicado
+
+¿Que es un monolito?
+R:// En ingeniería de software, una aplicación monolítica hace referencia a una aplicación software en la que la capa de interfaz de usuario, lógica de negocios y la capa de acceso a datos están combinadas en un mismo programa y sobre una misma plataforma.
+Monolito significa "trabajo construido sobre una piedra" por lo que se utiliza para definir la arquitectura de algunos sistemas, se refiere a cómo desarrollar un sistema, programa o aplicación donde todas las funcionalidades y códigos están en un solo proceso. Estas diversas funcionalidades están en el mismo código fuente y en su ejecución comparten recursos desde la misma máquina, ya sea procesamiento, memoria, bases de datos y archivos
+
+¿Por qué no quiero diseñar mi sistema como un monolito?
+R://Alta Mantenibilidad, baja Escalabilidad, alta Complejidad y Alto costo de procesamiento
