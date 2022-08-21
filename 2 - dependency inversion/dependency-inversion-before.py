@@ -1,27 +1,27 @@
-class LightBulb:
+class Bombilla:
     def turn_on(self):
-        print("LightBulb: turned on...")
+        print("Bombilla: turned on...")
 
     def turn_off(self):
-        print("LightBulb: turned off...")
+        print("Bombilla: turned off...")
 
 
-class ElectricPowerSwitch:
+class Interruptor:
 
-    def __init__(self, l: LightBulb):
-        self.lightBulb = l
+    def __init__(self, l: Bombilla):
+        self.Bombilla = l
         self.on = False
 
     def press(self):
         if self.on:
-            self.lightBulb.turn_off()
+            self.Bombilla.turn_off()
             self.on = False
         else:
-            self.lightBulb.turn_on()
+            self.Bombilla.turn_on()
             self.on = True
 
 
-l = LightBulb()
-switch = ElectricPowerSwitch(l)
+l = Bombilla()
+switch = Interruptor(l)
 switch.press()
 switch.press()

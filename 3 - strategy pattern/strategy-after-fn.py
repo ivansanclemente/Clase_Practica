@@ -8,7 +8,7 @@ def generate_id(length=8):
     return ''.join(random.choices(string.ascii_uppercase, k=length))
 
 
-class SupportTicket:
+class Ticket_Soporte:
 
     def __init__(self, customer, issue):
         self.id = generate_id()
@@ -16,35 +16,35 @@ class SupportTicket:
         self.issue = issue
 
 
-def fifoOrdering(list: List[SupportTicket]) -> List[SupportTicket]:
+def fifoOrdering(list: List[Ticket_Soporte]) -> List[Ticket_Soporte]:
     return list.copy()
 
 
-def filoOrdering(list: List[SupportTicket]) -> List[SupportTicket]:
+def filoOrdering(list: List[Ticket_Soporte]) -> List[Ticket_Soporte]:
     list_copy = list.copy()
     list_copy.reverse()
     return list_copy
 
 
-def randomOrdering(list: List[SupportTicket]) -> List[SupportTicket]:
+def randomOrdering(list: List[Ticket_Soporte]) -> List[Ticket_Soporte]:
     list_copy = list.copy()
     random.shuffle(list_copy)
     return list_copy
 
 
-def blackHoleOrdering(list: List[SupportTicket]) -> List[SupportTicket]:
+def blackHoleOrdering(list: List[Ticket_Soporte]) -> List[Ticket_Soporte]:
     return []
 
 
-class CustomerSupport:
+class Soporte_Cliente:
 
     def __init__(self):
         self.tickets = []
 
     def create_ticket(self, customer, issue):
-        self.tickets.append(SupportTicket(customer, issue))
+        self.tickets.append(Ticket_Soporte(customer, issue))
 
-    def process_tickets(self, ordering: Callable[[List[SupportTicket]], List[SupportTicket]]):
+    def process_tickets(self, ordering: Callable[[List[Ticket_Soporte]], List[Ticket_Soporte]]):
         # create the ordered list
         ticket_list = ordering(self.tickets)
 
@@ -57,7 +57,7 @@ class CustomerSupport:
         for ticket in ticket_list:
             self.process_ticket(ticket)
 
-    def process_ticket(self, ticket: SupportTicket):
+    def process_ticket(self, ticket: Ticket_Soporte):
         print("==================================")
         print(f"Processing ticket id: {ticket.id}")
         print(f"Customer: {ticket.customer}")
@@ -66,7 +66,7 @@ class CustomerSupport:
 
 
 # create the application
-app = CustomerSupport()
+app = Soporte_Cliente()
 
 # register a few tickets
 app.create_ticket("John Smith", "My computer makes strange sounds!")
